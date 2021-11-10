@@ -11,16 +11,19 @@ import processing.core.PApplet
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var sketch : PApplet
+    private lateinit var sketch : Sketch
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val frame = FrameLayout(this)
         frame.id = CompatUtils.getUniqueViewId()
-        setContentView(frame, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
+        setContentView(frame, ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
 
         sketch = Sketch()
+
         val fragment = PFragment(sketch)
+
         fragment.setView(frame, this)
     }
 
