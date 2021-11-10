@@ -6,9 +6,6 @@ import java.util.ArrayList
 
 class Sketch : PApplet() {
 
-    var x = width
-    var y = height
-
     lateinit var circles: ArrayList<Circle>
 
     override fun setup() {
